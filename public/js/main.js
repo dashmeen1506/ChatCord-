@@ -26,16 +26,16 @@ sendMessage =(message)=>{
 }
 function appendMessage(msg,type)
 {
-    let mainDiv = document.createElement('div')
+    let div = document.createElement('div')
     let className = type
-    mainDiv.classList.add(className, 'message')
+    div.classList.add(className, 'message')
 
-    let markup = `
+    let container = `
         <h4>${msg.user}</h4>
         <p>${msg.message}</p>
     `
-    mainDiv.innerHTML = markup
-    messageArea.appendChild(mainDiv)
+    div.innerHTML = container 
+    messageArea.appendChild(div)
 }
 
 
